@@ -259,6 +259,247 @@ joblib.dump(best_model, "fraud_model.pkl")
 * Real-Time Fraud Detection System
 * Deployment using Flask or Streamlit
 
+# Task 3
+
+# Customer Segmentation using K-Means Clustering and PCA
+
+##  Project Overview
+
+This project focuses on **Customer Segmentation** using **Unsupervised Machine Learning** techniques. The goal is to identify hidden customer groups based on their purchasing behavior and demographic information. By applying **Principal Component Analysis (PCA)** and **K-Means Clustering**, customers are segmented into meaningful groups that can be used for targeted marketing and business decision-making.
+
+This project was completed as part of the **DecodeLabs Data Science Industrial Training Program (Project 3)**.
+
+---
+
+##  Objectives
+
+- Perform data preprocessing and feature engineering.
+- Standardize customer data for clustering.
+- Apply Principal Component Analysis (PCA) for dimensionality reduction.
+- Determine the optimal number of clusters using:
+  - Elbow Method
+  - Silhouette Score
+- Build a K-Means clustering model.
+- Visualize customer segments.
+- Generate actionable customer personas and business insights.
+
+---
+
+##  Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-Learn
+- Joblib
+- Jupyter Notebook
+- VS Code
+
+---
+
+##  Project Structure
+
+```text
+Customer-Segmentation-Project/
+│
+├── data/
+│   └── Mall_Customers.csv
+│
+├── images/
+│   ├── elbow_curve.png
+│   ├── silhouette_curve.png
+│   └── customer_clusters.png
+│
+├── models/
+│   ├── scaler.pkl
+│   ├── pca.pkl
+│   └── kmeans.pkl
+│
+├── notebooks/
+│   └── customer_segmentation.ipynb
+│
+├── Customer_Segmentation_Output.csv
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+---
+
+##  Dataset
+
+The dataset contains customer demographic and spending information.
+
+### Features
+
+- CustomerID
+- Gender
+- Age
+- Annual Income (k$)
+- Spending Score (1–100)
+
+Dataset Source:
+
+https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python
+
+---
+
+##  Workflow
+
+### 1. Data Collection
+- Load customer dataset.
+- Explore dataset structure and statistics.
+
+### 2. Data Preprocessing
+- Handle missing values.
+- Encode categorical variables.
+- Select relevant features.
+
+### 3. Feature Scaling
+- Standardize data using StandardScaler.
+
+### 4. Dimensionality Reduction
+- Apply PCA.
+- Retain 95% of variance.
+
+### 5. Optimal Cluster Selection
+- Elbow Method
+- Silhouette Score Analysis
+
+### 6. K-Means Clustering
+- Train K-Means model.
+- Assign cluster labels to customers.
+
+### 7. Data Visualization
+- PCA 2D Scatter Plot
+- Cluster Distribution Charts
+- Elbow Curve
+- Silhouette Score Curve
+
+### 8. Customer Persona Generation
+- Analyze cluster characteristics.
+- Create business-friendly customer segments.
+
+---
+
+##  Results
+
+The K-Means algorithm successfully grouped customers into distinct segments based on income, age, and spending behavior.
+
+Example Customer Personas:
+
+### Cluster 0 – Conservative Wealthy Customers
+- High Income
+- Low Spending
+- Prefer savings over luxury purchases
+
+### Cluster 1 – Premium Customers
+- High Income
+- High Spending
+- Most valuable customers
+
+### Cluster 2 – Young Trend Shoppers
+- Low Income
+- High Spending
+- Influenced by trends and promotions
+
+### Cluster 3 – Budget Customers
+- Low Income
+- Low Spending
+- Price-sensitive customers
+
+### Cluster 4 – Regular Customers
+- Moderate Income
+- Moderate Spending
+- Stable customer base
+
+---
+
+##  Sample Visualizations
+
+### Elbow Method
+Determines the optimal number of clusters.
+
+### Silhouette Score
+Measures clustering quality.
+
+### PCA Cluster Visualization
+Displays customer groups in reduced dimensions.
+
+---
+
+##  How to Run the Project
+
+### Clone Repository
+
+```bash
+git clone https://github.com/yourusername/customer-segmentation-project.git
+```
+
+### Navigate to Project Folder
+
+```bash
+cd customer-segmentation-project
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+```text
+notebooks/customer_segmentation.ipynb
+```
+
+---
+
+##  Required Libraries
+
+```text
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+joblib
+```
+
+---
+
+##  Business Applications
+
+- Customer Targeting
+- Personalized Marketing
+- Customer Retention
+- Loyalty Programs
+- Product Recommendations
+- Revenue Optimization
+
+---
+
+##  Learning Outcomes
+
+Through this project, I gained hands-on experience with:
+
+- Unsupervised Learning
+- Customer Segmentation
+- Principal Component Analysis (PCA)
+- K-Means Clustering
+- Data Visualization
+- Business Intelligence
+- Model Evaluation
+
 ---
 
 ## Author
