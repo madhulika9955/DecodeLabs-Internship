@@ -1,1 +1,280 @@
 # DecodeLabs-Internship
+
+# Task 1
+
+# House Price Prediction
+
+## Project Overview
+
+This project aims to predict house prices using Machine Learning techniques based on various property features such as area, number of bedrooms, bathrooms, stories, parking spaces, furnishing status, and preferred location. The objective is to build predictive models, evaluate their performance, and identify the factors that have the greatest impact on house prices.
+
+## Dataset
+
+* Dataset Name: Housing Prices Dataset
+* Source: Kaggle
+* File Used: `Housing.csv`
+
+## Project Tasks
+
+### 1. Data Loading & Exploration
+
+* Loaded the dataset using Pandas.
+* Examined dataset structure and dimensions.
+* Identified target and feature variables.
+* Checked for missing values and data types.
+
+### 2. Data Cleaning
+
+* Removed duplicate records.
+* Handled missing values.
+* Converted categorical variables into numerical format using one-hot encoding.
+* Prepared the dataset for model training.
+
+### 3. Model Building
+
+Two regression models were trained and evaluated:
+
+#### Linear Regression
+
+* MAE: 970,043
+* RMSE: 1,324,507
+* R² Score: 0.653
+
+#### Random Forest Regressor
+
+* MAE: 1,021,546
+* RMSE: 1,400,566
+* R² Score: 0.612
+
+### 4. Data Visualization
+
+The following visualizations were created:
+
+* House Price Distribution Histogram
+* Correlation Heatmap
+* Actual vs Predicted Price Scatter Plot
+
+All chart images are available in the `charts/` folder.
+
+## Results
+
+The Linear Regression model performed better than the Random Forest model on this dataset, achieving a higher R² score and lower prediction error. The model was able to explain approximately 65% of the variation in house prices.
+
+## Key Insights
+
+* Area is one of the strongest factors affecting house price.
+* Houses with more bathrooms, parking spaces, and stories generally have higher prices.
+* Preferred location significantly increases property value.
+* Furnishing status and air conditioning also contribute to pricing.
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Seaborn
+* Jupyter Notebook (VS Code)
+
+## Project Structure
+
+```text
+HousePricePrediction_MadhulikaSingh/
+│
+├── analysis.ipynb
+├── Housing.csv
+├── summary.pdf
+├── README.md
+│
+└── charts/
+    ├── price_distribution.png
+    ├── correlation_heatmap.png
+    └── actual_vs_predicted.png
+```
+
+## Conclusion
+
+This project demonstrates how machine learning can be used to estimate house prices based on property characteristics. The findings can help buyers, sellers, and real estate businesses make more informed decisions regarding property valuation.
+
+
+
+# Task 2
+
+# Fraud Detection Pipeline using Machine Learning
+
+## Project Overview
+
+This project aims to detect fraudulent credit card transactions using Machine Learning techniques. Since fraud transactions represent a very small percentage of all transactions, the dataset is highly imbalanced. To address this challenge, SMOTE (Synthetic Minority Over-sampling Technique) is used to balance the dataset before training classification models.
+
+The project compares multiple machine learning algorithms and evaluates them using Precision, Recall, F1-Score, and ROC-AUC instead of Accuracy, which can be misleading for imbalanced datasets.
+
+---
+
+## Dataset
+
+Dataset Used: Credit Card Fraud Detection Dataset
+
+* Total Transactions: 284,807
+* Fraud Transactions: 492
+* Genuine Transactions: 284,315
+* Fraud Percentage: 0.172%
+
+Target Variable:
+
+* Class = 0 → Genuine Transaction
+* Class = 1 → Fraudulent Transaction
+
+Dataset Source:
+https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
+---
+
+## Project Workflow
+
+1. Data Collection
+2. Data Exploration and Analysis (EDA)
+3. Data Cleaning
+4. Train-Test Split
+5. Handling Class Imbalance using SMOTE
+6. Logistic Regression Model Training
+7. Random Forest Model Training
+8. Hyperparameter Tuning using GridSearchCV
+9. Model Evaluation
+10. Best Model Selection
+11. Model Saving using Joblib
+
+---
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* Imbalanced-Learn (SMOTE)
+* Joblib
+
+---
+
+## Machine Learning Models
+
+### Logistic Regression
+
+Used as a baseline classification model to identify fraudulent transactions.
+
+### Random Forest Classifier
+
+An ensemble learning method used to improve prediction performance and handle complex patterns in the dataset.
+
+---
+
+## Evaluation Metrics
+
+Since the dataset is highly imbalanced, model performance is evaluated using:
+
+* Precision
+* Recall
+* F1 Score
+* ROC-AUC Score
+* Confusion Matrix
+
+Accuracy is not considered a reliable metric for this project.
+
+---
+
+## Results
+
+The models were trained on a balanced dataset generated using SMOTE.
+
+Performance comparison was carried out between:
+
+* Logistic Regression
+* Random Forest Classifier
+
+The best-performing model was selected based on Recall and ROC-AUC Score.
+
+---
+
+## Project Structure
+
+```text
+Fraud_Detection_Project/
+│
+├── creditcard.csv
+├── fraud_detection.ipynb
+├── fraud_model.pkl
+├── README.md
+│
+├── graphs/
+│   ├── class_distribution.png
+│   ├── confusion_matrix.png
+│   └── roc_curve.png
+│
+└── reports/
+    └── project_report.pdf
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/Fraud-Detection-Pipeline.git
+```
+
+Install required packages:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn joblib
+```
+
+Run the notebook:
+
+```bash
+jupyter notebook
+```
+
+---
+
+## Model Saving
+
+The trained model is saved using Joblib:
+
+```python
+joblib.dump(best_model, "fraud_model.pkl")
+```
+
+---
+
+## Future Improvements
+
+* XGBoost Implementation
+* LightGBM Implementation
+* Deep Learning Approaches
+* Real-Time Fraud Detection System
+* Deployment using Flask or Streamlit
+
+---
+
+## Author
+
+Madhulika Singh
+
+B.Tech CSE (AI)
+
+ABES Institute of Technology
+
+GitHub: https://github.com/madhulika9955
+
+LinkedIn: https://www.linkedin.com/in/madhulika-singh-a34b9a28b/
+
+---
+
+## License
+
+This project is developed for educational and internship purposes.
