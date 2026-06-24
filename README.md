@@ -502,6 +502,233 @@ Through this project, I gained hands-on experience with:
 
 ---
 
+## Task 4
+
+# NLP & Sentiment Analysis using Machine Learning
+
+##  Project Overview
+
+This project focuses on **Natural Language Processing (NLP)** and **Sentiment Analysis**. The objective is to build a machine learning model that can analyze textual reviews and classify them as **Positive** or **Negative**.
+
+The project demonstrates the complete NLP workflow, including text preprocessing, feature extraction using TF-IDF, model training, evaluation, and prediction on new reviews.
+
+---
+
+##  Objectives
+
+* Clean and preprocess unstructured text data.
+* Perform tokenization, stop-word removal, and lemmatization.
+* Convert text into numerical features using TF-IDF.
+* Train a sentiment classification model.
+* Evaluate model performance using various metrics.
+* Predict sentiment for unseen reviews.
+
+---
+
+##  Dataset
+
+Dataset Used: **IMDB Movie Reviews Dataset**
+
+* Total Reviews: 50,000
+* Classes:
+
+  * Positive
+  * Negative
+
+Dataset Link:
+https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
+
+---
+
+## 🛠 Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* NLTK
+* Scikit-Learn
+* Matplotlib
+* Seaborn
+* WordCloud
+* Joblib
+
+---
+
+##  Project Workflow
+
+### 1. Data Collection
+
+* Download IMDB Reviews Dataset from Kaggle.
+* Load dataset using Pandas.
+
+### 2. Data Preprocessing
+
+* Convert text to lowercase.
+* Remove special characters and numbers.
+* Tokenization.
+* Stop-word removal.
+* Lemmatization.
+
+### 3. Feature Engineering
+
+* Apply TF-IDF Vectorization.
+* Convert text into numerical vectors.
+
+### 4. Model Building
+
+* Train Multinomial Naive Bayes Classifier.
+
+### 5. Model Evaluation
+
+* Accuracy Score
+* Classification Report
+* Confusion Matrix
+
+### 6. Prediction
+
+* Predict sentiment of custom reviews.
+
+---
+
+##  Project Structure
+
+```text
+NLP-Sentiment-Analysis/
+│
+├── data/
+│   └── IMDB Dataset.csv
+│
+├── notebook/
+│   └── NLP_Sentiment_Analysis.ipynb
+│
+├── models/
+│   ├── sentiment_model.pkl
+│   └── tfidf_vectorizer.pkl
+│
+├── reports/
+│   └── project_report.pdf
+│
+├── screenshots/
+│   ├── dataset_head.png
+│   ├── preprocessing.png
+│   ├── confusion_matrix.png
+│   └── wordcloud.png
+│
+├── README.md
+│
+└── requirements.txt
+```
+
+---
+
+##  Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/NLP-Sentiment-Analysis.git
+```
+
+Move into the project directory:
+
+```bash
+cd NLP-Sentiment-Analysis
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+##  Run the Project
+
+Open Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+Run:
+
+```text
+NLP_Sentiment_Analysis.ipynb
+```
+
+---
+
+##  Results
+
+Model Used:
+
+* Multinomial Naive Bayes
+
+Performance:
+
+* Accuracy: ~85% to 90%
+
+Evaluation Metrics:
+
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+
+---
+
+##  Sample Prediction
+
+Input Review:
+
+```text
+This movie was absolutely fantastic and enjoyable.
+```
+
+Output:
+
+```text
+Positive Review
+```
+
+Input Review:
+
+```text
+The movie was boring and a complete waste of time.
+```
+
+Output:
+
+```text
+Negative Review
+```
+
+---
+
+##  Screenshots
+
+Include the following screenshots in the repository:
+
+* Dataset Overview
+* Cleaned Reviews
+* TF-IDF Features
+* Confusion Matrix
+* Word Cloud
+* Prediction Results
+
+---
+
+##  Future Enhancements
+
+* Deploy model using Flask or Streamlit.
+* Use advanced NLP techniques.
+* Train using SVM and compare performance.
+* Add real-time review analysis.
+* Integrate deep learning models such as LSTM and BERT.
+
+---
+
 ## Author
 
 Madhulika Singh
